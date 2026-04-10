@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Géneros Periodísticos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Plugin Datalabels -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tablero de Géneros Periodísticos</h1>
+            <p>Análisis de boletines por trimestre y dependencia</p>
+        </header>
+
+        <section class="filters">
+            <div class="filter-group">
+                <label for="dep-filter">Filtrar por Dependencia</label>
+                <select id="dep-filter">
+                    <option value="all">Todas las Dependencias</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="time-filter">Trimestre y Año</label>
+                <select id="time-filter">
+                    <option value="all">Todos los Períodos</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="dashboard-content">
+            <!-- Quarters and charts will be injected here -->
+            <div class="empty-state">Cargando datos...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
